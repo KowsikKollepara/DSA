@@ -1,0 +1,35 @@
+// Problem: Longest Valid Parentheses
+// Approach:
+//   - Use stack to store indices
+//   - Push -1 initially as base index ----------> (Key step)
+//   - For '(' push index
+//   - For ')'  pop stack
+//   - If stack becomes empty, push current index
+//   - Else update max length as (i - stack.top())
+//
+// Time Complexity: O(n)
+// Space Complexity: O(n)
+
+class Solution {
+public:
+    int longestValidParentheses(string s) {
+        stack<int> st;
+        int cnt=0;
+        st.push(-1);
+        for(int i=0;i<s.size();i++){
+            if(s[i]=='('){
+                st.push(i);
+                }
+            else {
+                st.pop();
+                if(st.empty()){
+                    st.push(i);
+                }
+                else{
+                    cnt=max(cnt,i-st.top());
+                }
+            }
+        }
+    return cnt;
+    }
+};
