@@ -1,1 +1,1 @@
-<h3>Stack and Queue</h3>
+<h3>Stack</h3>
