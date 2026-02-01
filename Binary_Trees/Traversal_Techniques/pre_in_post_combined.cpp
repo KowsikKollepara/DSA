@@ -55,7 +55,13 @@ vector<vector<int>> all(node* root){
 }
 
 int main() {
-
+        /*
+            1
+           / \
+          2   3
+         / \
+        4   5
+    */
     node* root = new node(1);
     root->left = new node(2);
     root->right = new node(3);
