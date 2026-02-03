@@ -1,2 +1,2 @@
 # DSA
-My DSA practice
+DSA practice
