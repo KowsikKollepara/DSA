@@ -1,3 +1,5 @@
+#include <bits/stdc++.h>
+using namespace std;
 class StockSpanner {
 public:
     stack<pair<int,int>>st;
