@@ -12,8 +12,12 @@ Do not modify the linked list.
 * Use Tortoise Hare approach(i.e take two pointers slow,fast, move fast by two steps and slow by one step).
 * When they meet at one point initialize fast pointer at head again and move both by single single step.
 * And the second time when they meet it is the starting point of cycle.
-<img src="https://static.takeuforward.org/content/19.png-Q8E1KGuH" alt="Image 1">
-<img src="https://static.takeuforward.org/content/20.png-D9L7pl1P" alt="Image 2">
+<p align="center">
+  <img src="https://static.takeuforward.org/content/19.png-Q8E1KGuH" width="40%"/>
+ <img src="https://static.takeuforward.org/content/20.png-D9L7pl1P" width="40%"/>
+</p>
+ 
+
 
 **Complexity:**
 Time: `O(N)`
