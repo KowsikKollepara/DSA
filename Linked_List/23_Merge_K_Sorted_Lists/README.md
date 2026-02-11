@@ -13,4 +13,5 @@ Merge all the linked-lists into one sorted linked-list and return it.
 
 **Complexity:**
 Time: `O(NlogK) `
-Space: `O(K)`
+Space: `O(K)`<br>
+Where, N is number of elements in list , K is number of lists
