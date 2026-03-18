@@ -9,7 +9,7 @@ Note that intervals which only touch at a point are non-overlapping. For example
 **Approach:**
 Use Greedy approach:
 
-* Sort intervals by their end time.
+* Sort intervals by their end time.(Can do using either lambda operator or comparator)
 * Iterate and pick intervals whose start time is ≥ last selected end time.
 * Count selected intervals.
 * Result = total intervals − selected intervals.
