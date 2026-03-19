@@ -13,15 +13,15 @@ Return the minimum number of candies you need to have to distribute the candies 
 **Approach:**
 * Use Slope Approach : <br>
 * Start with sum=1 and i =1
-* If ratings[i]==ratings[i-1] :
-* ----> Give 1 candy and move forward
-* If increasing slope :
-* ----> Keep increasing candies,store this in peak,and add to totalsum for each move.
-* If Decreasing slope :
-* ----> Assign candies similarly (reverse logic)
-* ----> Add this to sum
-* Adjustment :
-* ---->if down >peak, add down-peak to sum.
+* If ratings[i]==ratings[i-1] : <br>
+ ----> Give 1 candy and move forward
+* If increasing slope : <br>
+ ----> Keep increasing candies,store this in peak,and add to totalsum for each move.
+* If Decreasing slope :<br>
+ ----> Assign candies similarly (reverse logic)<br>
+ ----> Add this to sum
+* Adjustment :<br>
+ ---->if down >peak, add down-peak to sum.
 
 
 **Complexity:**
