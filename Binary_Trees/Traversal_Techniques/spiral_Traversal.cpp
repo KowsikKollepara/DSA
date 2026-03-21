@@ -9,39 +9,42 @@ struct TreeNode {
      TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
      TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
   };
- class Solution {
+class Solution {
 public:
-    vector<vector<int>> levelOrder(TreeNode* root) {
-        vector<vector<int>>ans;
+    vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
+        vector<vector<int>> result;
         if(root==NULL){
-            return ans;
+            return result;
         }
-        queue <TreeNode*>q;
+        queue<TreeNode*>q;
         q.push(root);
+        bool left_right=true;
         while(!q.empty()){
             int n=q.size();
-            vector <int> level;
+            vector <int> row(n);
             for(int i=0;i<n;i++){
-                TreeNode* branch=q.front();
+                TreeNode* node=q.front();
                 q.pop();
-                if(branch->left){
-                    q.push(branch->left);
+                int index=(left_right)?i:(n-i-1);
+                row[index]=node->val;
+                if(node->left){
+                    q.push(node->left);
                 }
-                if(branch->right){
-                    q.push(branch->right);
+                if(node->right){
+                    q.push(node->right);
                 }
-                level.push_back(branch->val);
             }
-            ans.push_back(level);
+            left_right=!left_right;
+            result.push_back(row);
         }
-        return ans;
+        return result;
     }
 };
-
 
 int main(){
     
 return 0;
 }
+
 
 
